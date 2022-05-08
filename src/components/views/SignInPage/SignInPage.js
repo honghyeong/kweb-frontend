@@ -1,8 +1,12 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { signInUser } from "../../../_actions/user_action";
 
-function SignInPage() {
+function SignInPage(props) {
+  const dispatch = useDispatch();
   const [id, setId] = useState("");
   const [password, setPassword] = useState("");
+  const [role, setRole] = useState(0);
 
   const onIdHandler = (event) => {
     setId(event.currentTarget.value);
@@ -10,8 +14,29 @@ function SignInPage() {
   const onPasswordHandler = (event) => {
     setPassword(event.currentTarget.value);
   };
+
+  const onRoleHandler = (event) => {
+    setRole(event.currentTarget.value);
+  };
   const onSubmitHandler = (event) => {
     event.preventDefault();
+
+    console.log("Id:", id);
+    console.log("Password:", password);
+
+    let body = {
+      id,
+      password,
+      role,
+    };
+
+    dispatch(signInUser(body)).then((response) => {
+      if (response.payload.loginSuccess) {
+        props.history.push("/landing");
+      } else {
+        alert("Login Failed");
+      }
+    });
   };
 
   return (
@@ -22,7 +47,7 @@ function SignInPage() {
           <div>수강신청 시스템</div>
           <div>COURSE REGISTRATION</div>
           <form onSubmit={onSubmitHandler}>
-            <input type="checkbox" />
+            <input type="checkbox" value={1} onClick={onRoleHandler} />
             <input
               type="text"
               placeholder="ID"
@@ -35,6 +60,7 @@ function SignInPage() {
               value={password}
               onChange={onPasswordHandler}
             />
+
             <button>LOGIN</button>
           </form>
         </div>
