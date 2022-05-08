@@ -3,9 +3,7 @@ import React, { useEffect } from "react";
 
 function LandingPage() {
   useEffect(() => {
-    axios
-      .get("http://localhost:3002/api/connect")
-      .then((response) => console.log(response));
+    axios.get("/api/connect").then((response) => console.log(response));
   }, []);
   return <div>LandingPage</div>;
 }
