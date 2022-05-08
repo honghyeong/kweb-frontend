@@ -5,7 +5,11 @@ function LandingPage() {
   useEffect(() => {
     axios.get("/api/connect").then((response) => console.log(response));
   }, []);
-  return <div>LandingPage</div>;
+  return (
+    <div>
+      <div>LandingPage</div>
+    </div>
+  );
 }
 
 export default LandingPage;
