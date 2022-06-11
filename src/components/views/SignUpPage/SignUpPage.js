@@ -1,8 +1,9 @@
+import axios from "axios";
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { signUpUser } from "../../../_actions/user_action";
 
-function SignUpPage() {
+function SignUpPage(props) {
   const dispatch = useDispatch();
   const [id, setId] = useState("");
   const [password, setPassword] = useState("");
@@ -39,16 +40,20 @@ function SignUpPage() {
       role,
     };
 
-    // dev
-    console.log(body);
-
-    dispatch(signUpUser(body)).then((response) => {
-      if (response.payload.signUpSuccess) {
+    axios.post("/api/auth/signup", body).then((response) => {
+      if (response.data.signUpSuccess) {
         props.history.push("/");
       } else {
-        alert("Register Failed");
+        alert("SignUp Failed");
       }
     });
+    // dispatch(signUpUser(body)).then((response) => {
+    //   if (response.payload.signUpSuccess) {
+    //     props.history.push("/");
+    //   } else {
+    //     alert("SignUp Failed");
+    //   }
+    // });
   };
 
   return (
@@ -95,7 +100,7 @@ function SignUpPage() {
           </div>
           <div id="role">
             <div>
-              <label for="student">학생</label>
+              <label>학생</label>
               <input
                 type="radio"
                 id="student"
@@ -105,7 +110,7 @@ function SignUpPage() {
               />
             </div>
             <div>
-              <label for="instructor">교수</label>
+              <label>교수</label>
               <input
                 type="radio"
                 id="instructor"
