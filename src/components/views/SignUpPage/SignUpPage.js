@@ -1,6 +1,9 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { signUpUser } from "../../../_actions/user_action";
 
 function SignUpPage() {
+  const dispatch = useDispatch();
   const [id, setId] = useState("");
   const [password, setPassword] = useState("");
   const [ucode, setUcode] = useState("");
@@ -27,9 +30,25 @@ function SignUpPage() {
 
   const onSubmitHandler = (event) => {
     event.preventDefault();
-    console.log(
-      `id: ${id}, pw : ${password}, name : ${name}, uCode : ${ucode}, role : ${role}`
-    );
+
+    let body = {
+      id,
+      password,
+      name,
+      ucode,
+      role,
+    };
+
+    // dev
+    console.log(body);
+
+    dispatch(signUpUser(body)).then((response) => {
+      if (response.payload.signUpSuccess) {
+        props.history.push("/");
+      } else {
+        alert("Register Failed");
+      }
+    });
   };
 
   return (
