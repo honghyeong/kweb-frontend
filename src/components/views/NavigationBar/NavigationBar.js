@@ -15,7 +15,7 @@ function NavigationBar(props) {
   return (
     <>
       <div>NavigationBar</div>
-      <button onSubmit={logOutHandler}>로그아웃</button>
+      <button onClick={logOutHandler}>로그아웃</button>
     </>
   );
 }
