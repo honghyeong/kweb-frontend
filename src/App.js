@@ -7,7 +7,7 @@ import SignUpPage from "./components/views/SignUpPage/SignUpPage";
 function App() {
   return (
     <Router>
-      <div>
+      <div>~
         <Switch>
           <Route exact path="/" component={SignInPage} />
           <Route path="/signup" component={SignUpPage} />

@@ -30,6 +30,9 @@ function SignInPage(props) {
       role,
     };
 
+    // dev
+    console.log("body:", body);
+
     dispatch(signInUser(body)).then((response) => {
       if (response.payload.loginSuccess) {
         props.history.push("/landing");
