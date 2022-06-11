@@ -16,7 +16,7 @@ function SignInPage(props) {
   };
 
   const onRoleHandler = (event) => {
-    setRole(event.currentTarget.value);
+    setRole(parseInt(event.currentTarget.value));
   };
   const onSubmitHandler = (event) => {
     event.preventDefault();
@@ -51,18 +51,42 @@ function SignInPage(props) {
           <div>COURSE REGISTRATION</div>
           <form onSubmit={onSubmitHandler}>
             <input type="checkbox" value={1} onClick={onRoleHandler} />
-            <input
-              type="text"
-              placeholder="ID"
-              value={id}
-              onChange={onIdHandler}
-            />
-            <input
-              type="password"
-              placeholder="PASSWORD"
-              value={password}
-              onChange={onPasswordHandler}
-            />
+            <div>
+              <div>아이디</div>
+              <input
+                type="text"
+                placeholder="ID"
+                value={id}
+                onChange={onIdHandler}
+              />
+            </div>
+            <div>
+              <div>패스워드</div>
+              <input
+                type="password"
+                placeholder="PASSWORD"
+                value={password}
+                onChange={onPasswordHandler}
+              />
+            </div>
+            <div>
+              <label>교수</label>
+              <input
+                type="radio"
+                id="instructor"
+                value="0"
+                checked={role === 0}
+                onClick={onRoleHandler}
+              />
+              <label>학생</label>
+              <input
+                type="radio"
+                id="student"
+                value="1"
+                checked={role === 1}
+                onClick={onRoleHandler}
+              />
+            </div>
 
             <button>LOGIN</button>
           </form>
