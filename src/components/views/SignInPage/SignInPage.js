@@ -21,8 +21,8 @@ function SignInPage(props) {
   const onSubmitHandler = (event) => {
     event.preventDefault();
 
-    console.log("Id:", id);
-    console.log("Password:", password);
+    // console.log("Id:", id);
+    // console.log("Password:", password);
 
     let body = {
       id,
@@ -31,11 +31,11 @@ function SignInPage(props) {
     };
 
     // dev
-    console.log("body:", body);
+    // console.log("body:", body);
 
     dispatch(signInUser(body)).then((response) => {
       if (response.payload.signInSuccess) {
-        props.history.push("/landing");
+        props.history.push("/lecture");
       } else {
         alert("Login Failed");
       }
