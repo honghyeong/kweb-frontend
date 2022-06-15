@@ -6,7 +6,7 @@ import NavigationBar from "./components/views/NavigationBar/NavigationBar";
 import Lectures from "./components/views/Lectures/Lectures";
 import InstructorLectures from "./components/views/Lectures/InstructorLectures";
 import StudentLectures from "./components/views/Lectures/StudentLectures";
-import createLecture from "./components/views/Lectures/createLecture";
+import CreateLecture from "./components/views/Lectures/CreateLecture";
 
 function App() {
   return (
@@ -28,7 +28,7 @@ function App() {
           />
           <Route
             path="/lecture/instructor/register"
-            component={createLecture}
+            component={CreateLecture}
           />
           <Route path="/logout" component={NavigationBar} />
         </Switch>

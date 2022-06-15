@@ -16,9 +16,14 @@ function InstructorLectures() {
     });
   }, [lectures]);
 
+  const onCreate = () => {
+    window.location.href = "instructor/register";
+  };
+
   return (
     <>
       <div>LectureList</div>
+      <button onClick={onCreate}>강의 개설</button>
       {lectures.map((lecture) => {
         return <InstructorLecture lecture={lecture} key={lecture.id} />;
       })}
