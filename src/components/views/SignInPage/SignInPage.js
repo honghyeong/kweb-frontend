@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+import { useCookies } from "react-cookie";
 import { useDispatch } from "react-redux";
+import { setCookie } from "../../../utils/Cookie";
 import { signInUser } from "../../../_actions/user_action";
 
 function SignInPage(props) {
@@ -20,9 +22,6 @@ function SignInPage(props) {
   };
   const onSubmitHandler = (event) => {
     event.preventDefault();
-
-    // console.log("Id:", id);
-    // console.log("Password:", password);
 
     let body = {
       id,
