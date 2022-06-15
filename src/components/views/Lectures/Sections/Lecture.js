@@ -8,6 +8,7 @@ function Lecture({ lecture }) {
         <div>{lecture.title}</div>
         <div>{lecture.description}</div>
         <button>신청</button>
+        <div>test</div>
       </div>
     </>
   );
