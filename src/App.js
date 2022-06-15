@@ -7,6 +7,8 @@ import Lectures from "./components/views/Lectures/Lectures";
 import InstructorLectures from "./components/views/Lectures/InstructorLectures";
 import StudentLectures from "./components/views/Lectures/StudentLectures";
 import CreateLecture from "./components/views/Lectures/CreateLecture";
+import Boards from "./components/views/Boards/Boards";
+import CreateBoard from "./components/views/Boards/CreateBoard";
 
 function App() {
   return (
@@ -26,6 +28,12 @@ function App() {
             component={StudentLectures}
             exact={true}
           />
+          <Route
+            path="/lecture/instructor/register"
+            component={CreateLecture}
+          />
+          <Route path="/board" component={Boards} exact={true} />
+          <Route path="/board/register" component={CreateBoard} exact={true} />
           <Route
             path="/lecture/instructor/register"
             component={CreateLecture}
