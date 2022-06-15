@@ -11,6 +11,8 @@ function Lectures() {
     });
   }, [lectures]);
 
+  const onCreate = () => {};
+
   return (
     <>
       <div>LectureList</div>

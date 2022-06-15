@@ -7,7 +7,7 @@ function StudentLecture({ lecture }) {
         <div>{lecture.id}</div>
         <div>{lecture.title}</div>
         <div>{lecture.description}</div>
-        <button value={lecture.id}>신청</button>
+        <button value={lecture.id}>수강 취소</button>
         <div>test</div>
       </div>
     </>

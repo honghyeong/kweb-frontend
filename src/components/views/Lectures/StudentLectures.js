@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import StudentLecture from "./Sections/studentLecture";
+import StudentLecture from "./Sections/StudentLecture";
 
 /**
  * 학생이 신청한 강의 목록을 볼 수 있다.
