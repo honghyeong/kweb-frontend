@@ -9,7 +9,6 @@ function App() {
   return (
     <Router>
       <div>
-        ~
         <Switch>
           <Route exact path="/" component={SignInPage} />
           <Route path="/signup" component={SignUpPage} />
