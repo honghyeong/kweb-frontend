@@ -1,6 +1,11 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import Lecture from "./Sections/Lecture";
+import InstructorLecture from "./Sections/instructorLecture";
+
+/**
+ * 교수자가 개설한 강의 목록을 볼 수 있다.
+ * 해당 강의를 누르면 강의에 등록된 게시물 목록을 보여준다.
+ */
 
 function InstructorLectures() {
   const [lectures, setLecture] = useState([]);
@@ -15,7 +20,7 @@ function InstructorLectures() {
     <>
       <div>LectureList</div>
       {lectures.map((lecture) => {
-        return <Lecture lecture={lecture} key={lecture.id} />;
+        return <InstructorLecture lecture={lecture} key={lecture.id} />;
       })}
     </>
   );

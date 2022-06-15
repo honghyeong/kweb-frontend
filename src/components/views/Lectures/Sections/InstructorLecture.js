@@ -1,9 +1,9 @@
 import React from "react";
 
-function Lecture({ lecture }) {
+function InstructorLecture({ lecture }) {
   return (
     <>
-      <div className="lecture">
+      <div className="instructor-lecture">
         <div>{lecture.id}</div>
         <div>{lecture.title}</div>
         <div>{lecture.description}</div>
@@ -14,4 +14,4 @@ function Lecture({ lecture }) {
   );
 }
 
-export default Lecture;
+export default InstructorLecture;
