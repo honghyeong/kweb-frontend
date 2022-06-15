@@ -1,5 +1,6 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { getCookie } from "../../../utils/Cookie";
 
 function CreateLecture() {
   const [inputs, setInputs] = useState({
@@ -36,6 +37,17 @@ function CreateLecture() {
   const onReset = (event) => {
     setInputs({ title: "", description: "" });
   };
+
+  /**
+   * redirection testing
+   */
+  useEffect(() => {
+    const role = getCookie("role");
+    console.log(role);
+    if (role != 0) {
+      window.location.href = "/";
+    }
+  });
 
   return (
     <>
