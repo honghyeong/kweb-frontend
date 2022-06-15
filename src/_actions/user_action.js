@@ -1,10 +1,18 @@
 import axios from "axios";
-import { SIGNIN_USER, SIGNUP_USER } from "./types";
+import { setCookie } from "../utils/Cookie";
+import { LOGOUT_USER, SIGNIN_USER } from "./types";
 
 export function signInUser(data) {
   const request = axios
     .post("/api/auth/signin", data)
-    .then((response) => response.data);
+    .then((response) => {
+      return response.data;
+    })
+    .catch((err) => {
+      if (err && err.response.status == 401) {
+        alert("Login Failed");
+      }
+    });
 
   return {
     type: SIGNIN_USER,
@@ -12,13 +20,13 @@ export function signInUser(data) {
   };
 }
 
-export function signUpUser(data) {
+export function logoutUser() {
   const request = axios
-    .post("/api/auth/signup", data)
+    .post("/api/auth/logout")
     .then((response) => response.data);
 
   return {
-    type: SIGNUP_USER,
+    type: LOGOUT_USER,
     payload: request,
   };
 }

@@ -8,6 +8,7 @@ import { applyMiddleware, createStore } from "redux";
 import promiseMiddleWare from "redux-promise";
 import ReduxThunk from "redux-thunk";
 import Reducer from "./_reducers";
+import { CookiesProvider } from "react-cookie";
 
 const createStoreWithMiddleWare = applyMiddleware(
   promiseMiddleWare,
@@ -15,15 +16,17 @@ const createStoreWithMiddleWare = applyMiddleware(
 )(createStore);
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <Provider
-    store={createStoreWithMiddleWare(
-      Reducer,
-      window.__REDUX_DEVTOOLS_EXTENSION__ &&
-        window.__REDUX_DEVTOOLS_EXTENSION__()
-    )}
-  >
-    <App />
-  </Provider>
+  <CookiesProvider>
+    <Provider
+      store={createStoreWithMiddleWare(
+        Reducer,
+        window.__REDUX_DEVTOOLS_EXTENSION__ &&
+          window.__REDUX_DEVTOOLS_EXTENSION__()
+      )}
+    >
+      <App />
+    </Provider>
+  </CookiesProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function
