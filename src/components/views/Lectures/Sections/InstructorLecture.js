@@ -1,15 +1,16 @@
 import React from "react";
 
-function InstructorLecture({ lecture }, onDelete) {
+function InstructorLecture({ lecture, onClick }) {
   return (
     <>
       <div className="instructor-lecture">
         <div>{lecture.id}</div>
-        <div>{lecture.title}</div>
+        <div>
+          <p onClick={onClick} id={lecture.id}>
+            {lecture.title}
+          </p>
+        </div>
         <div>{lecture.description}</div>
-        <button value={lecture.id} onClick={() => onDelete()}>
-          수강 신청
-        </button>
       </div>
     </>
   );

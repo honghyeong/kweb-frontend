@@ -20,12 +20,23 @@ function InstructorLectures() {
     window.location.href = "instructor/register";
   };
 
+  const onClick = (event) => {
+    console.log(event.target.id);
+    window.location.href = "/board/view/" + event.target.id;
+  };
+
   return (
     <>
       <div>LectureList</div>
       <button onClick={onCreate}>강의 개설</button>
       {lectures.map((lecture) => {
-        return <InstructorLecture lecture={lecture} key={lecture.id} />;
+        return (
+          <InstructorLecture
+            lecture={lecture}
+            key={lecture.id}
+            onClick={onClick}
+          />
+        );
       })}
     </>
   );

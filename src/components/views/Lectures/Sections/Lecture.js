@@ -1,6 +1,6 @@
 import React from "react";
 
-function Lecture({ lecture, onRegister }) {
+function Lecture({ lecture, onRegister, onClick }) {
   return (
     <>
       <div className="lecture">
