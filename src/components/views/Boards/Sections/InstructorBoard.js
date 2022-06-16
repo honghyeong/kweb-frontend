@@ -3,7 +3,7 @@ import React from "react";
 function InstructorBoard({ board }) {
   return (
     <>
-      <div>Board</div>
+      <div>InstructorBoard</div>
       <div className="board">
         <div>{board.id}</div>
         <div>{board.title}</div>

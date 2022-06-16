@@ -7,8 +7,9 @@ import Lectures from "./components/views/Lectures/Lectures";
 import InstructorLectures from "./components/views/Lectures/InstructorLectures";
 import StudentLectures from "./components/views/Lectures/StudentLectures";
 import CreateLecture from "./components/views/Lectures/CreateLecture";
-import Boards from "./components/views/Boards/Boards";
+import BoardLists from "./components/views/Boards/BoardLists";
 import CreateBoard from "./components/views/Boards/CreateBoard";
+import Board from "./components/views/Boards/Board";
 
 function App() {
   return (
@@ -32,7 +33,8 @@ function App() {
             path="/lecture/instructor/register"
             component={CreateLecture}
           />
-          <Route path="/board/view/" component={Boards} />
+          <Route path="/board/lists/" component={BoardLists} />
+          <Route path="/board/view" component={Board} />
           <Route path="/board/register" component={CreateBoard} exact={true} />
           <Route path="/logout" component={NavigationBar} />
         </Switch>

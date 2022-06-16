@@ -22,7 +22,7 @@ function InstructorLectures() {
 
   const onClick = (event) => {
     console.log(event.target.id);
-    window.location.href = "/board/view/" + event.target.id;
+    window.location.href = "/board/lists/" + event.target.id;
   };
 
   return (
