@@ -33,7 +33,7 @@ function App() {
             path="/lecture/instructor/register"
             component={CreateLecture}
           />
-          <Route path="/board/lists/" component={BoardLists} />
+          <Route path="/board/lists" component={BoardLists} />
           <Route path="/board/view" component={Board} />
           <Route path="/board/register" component={CreateBoard} exact={true} />
           <Route path="/logout" component={NavigationBar} />

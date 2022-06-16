@@ -9,9 +9,9 @@ function BoardLists() {
   const [role, setRole] = useState(0);
 
   const location = window.location.pathname;
-  const paramRegex = /view/;
+  const paramRegex = /lists/;
   const result = location.match(paramRegex).index;
-  const lectureId = Number(location.substring(result + 5));
+  const lectureId = Number(location.substring(result + 6));
   const params = { id: lectureId };
 
   const onClick = () => {};
@@ -22,7 +22,7 @@ function BoardLists() {
       .then((response) => {
         setBoards(response.data);
         setRole(getCookie("role"));
-        console.log(boards);
+        // console.log(boards);
       })
       .catch();
   }, [boards, role]);
