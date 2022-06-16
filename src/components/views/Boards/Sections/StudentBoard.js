@@ -7,7 +7,6 @@ function StudentBoard({ board }) {
       <div className="board">
         <div>{board.id}</div>
         <div>{board.title}</div>
-        <div>{board.content}</div>
       </div>
     </>
   );
