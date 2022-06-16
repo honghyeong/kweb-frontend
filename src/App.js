@@ -34,10 +34,6 @@ function App() {
           />
           <Route path="/board" component={Boards} exact={true} />
           <Route path="/board/register" component={CreateBoard} exact={true} />
-          <Route
-            path="/lecture/instructor/register"
-            component={CreateLecture}
-          />
           <Route path="/logout" component={NavigationBar} />
         </Switch>
       </div>
