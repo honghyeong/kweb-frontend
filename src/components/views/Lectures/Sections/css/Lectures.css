@@ -1,7 +1,16 @@
+.lecture-box {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(200, 200, 200);
+  padding-top: 10px;
+}
+
 .lecture-list-box {
-  width: 520px;
-  background-color: rgb(233, 230, 227);
+  width: 540px;
+  padding-left: 10px;
+  background-color: rgb(254, 254, 254);
   padding: 10px auto 30px auto;
+  padding-top: 5px;
   margin: 20px auto;
   height: 700px;
   border-radius: 20px;
@@ -21,7 +30,8 @@
 
 .lecture-category {
   display: flex;
-  width: 520px;
+  width: 500px;
+  margin-left: 5px;
   background-color: rgb(210, 205, 205);
   font-weight: bold;
   border-radius: 5px;

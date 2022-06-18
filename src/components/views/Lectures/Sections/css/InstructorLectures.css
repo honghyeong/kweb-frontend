@@ -1,11 +1,13 @@
 .instructor-lecture-list-box {
   width: 540px;
-  background-color: rgb(233, 230, 227);
+  background-color: white;
   padding: 10px auto 30px auto;
+  padding-top: 10px;
   margin: 20px auto;
   height: 700px;
   border-radius: 20px;
   font-size: 14px;
+  padding-left: 10px;
 }
 
 .instructor-lecture-name {
@@ -21,7 +23,8 @@
 
 .instructor-lecture-category {
   display: flex;
-  width: 520px;
+  margin-left: 5px;
+  width: 500px;
   background-color: rgb(210, 205, 205);
   font-weight: bold;
   border-radius: 5px;
