@@ -34,7 +34,7 @@ function SignInPage(props) {
 
     dispatch(signInUser(body)).then((response) => {
       if (response.payload.signInSuccess) {
-        props.history.push("/landing");
+        props.history.push("/lecture");
       } else {
         alert("Login Failed");
       }
