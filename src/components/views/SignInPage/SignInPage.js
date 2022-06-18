@@ -95,8 +95,8 @@ function SignInPage(props) {
             </div>
 
             <button>LOGIN</button>
-            <button>SIGNUP</button>
           </form>
+          <a href="/signup">회원가입</a>
         </div>
         <div></div>
       </div>

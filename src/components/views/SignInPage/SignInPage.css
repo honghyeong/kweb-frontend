@@ -60,3 +60,9 @@ body {
   background-color: #a20131;
   color: white;
 }
+
+.login-box a {
+  text-decoration-line: none;
+  color: inherit;
+  font-size: 12px;
+}
