@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  font-size: 1rem;
+  font-family: "Roboto", "Noto Sans KR", sans-serif;
+  font-weight: 400;
+  color: #000000;
+}
+
+.board-box {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(200, 200, 200);
+  padding-top: 40px;
+}
+
+.board-data-box {
+  height: 80vh;
+  width: 60vw;
+  background-color: white;
+  border-radius: 10px;
+  margin: 10px auto 10px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.board-header {
+  border: 1px solid rgb(156, 156, 156);
+  width: 40vw;
+  height: 5vh;
+  margin: 10px auto 5px auto;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.board-header-top {
+  width: 200px;
+  height: 30px;
+  background-color: rgb(208, 209, 210);
+  margin: 20px auto 10px auto;
+  text-align: center;
+  border-radius: 30px;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.board-header-id {
+  width: 5vw;
+  height: 3vh;
+  border: 1px solid transparent;
+  margin: auto 2px auto;
+  border: 1px solid rgb(210, 206, 206);
+}
+
+.board-header-title {
+  border: 1px solid transparent;
+  width: 30vw;
+  height: 3vh;
+  margin: auto 2px auto;
+
+  border: 1px solid rgb(210, 206, 206);
+}
+
+.board-content {
+  width: 50vw;
+  height: 60vh;
+  border: 1px solid rgb(156, 156, 156);
+  padding-left: 5px;
+  border-right: 1px solid rgb(214, 214, 214);
+  margin: 20px auto 10px auto;
+  border-radius: 5px;
+}

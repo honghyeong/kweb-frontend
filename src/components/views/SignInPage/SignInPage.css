@@ -1,0 +1,68 @@
+body {
+  margin: 0;
+  font-size: 1rem;
+  font-family: "Roboto", "Noto Sans KR", sans-serif;
+  font-weight: 400;
+  color: #1c1b1b;
+}
+
+.middle-box {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(200, 200, 200);
+  border: 2px solid transparent;
+}
+
+.login-box {
+  margin: 10vh auto;
+  height: 30vh;
+  width: 50vw;
+  background-color: white;
+  text-align: center;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.down-box {
+  height: 20vh;
+  width: 100vw;
+}
+
+.login-box-top {
+  font-size: 25px;
+  font-weight: bold;
+  color: rgb(95, 95, 95);
+}
+
+.login-box-middle {
+  margin: 10px auto;
+}
+
+.login-role {
+  font-size: 13px;
+}
+
+.login-box-user {
+  margin: 20px auto 5px;
+}
+
+.login-input {
+  margin: 3px;
+  padding: 5px;
+}
+
+.login-box button {
+  margin-top: 20px;
+  width: 80px;
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  background-color: #a20131;
+  color: white;
+}
+
+.login-box a {
+  text-decoration-line: none;
+  color: inherit;
+  font-size: 12px;
+}

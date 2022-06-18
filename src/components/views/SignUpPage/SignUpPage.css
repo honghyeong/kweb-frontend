@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+  font-size: 1rem;
+  font-family: "Roboto", "Noto Sans KR", sans-serif;
+  font-weight: 400;
+  color: #000000;
+}
+
+.signup-box {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(232, 232, 232);
+  border: 2px solid transparent;
+}
+
+.signup-top {
+  margin: 30px auto 10px;
+  font-size: 30px;
+  width: 30vw;
+  text-align: center;
+}
+
+.signup-middle {
+  margin: 10px auto 30px;
+  width: 40vw;
+  padding: 20px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.signup-middle div {
+  font-size: 12px;
+}
+
+.signup-middle input {
+  border: 1px solid rgb(191, 191, 191);
+  height: 20px;
+}
+
+.signup-input {
+  padding: 10px auto;
+  margin: 5px;
+}
+
+.signup-role {
+  text-align: center;
+}
+
+.signup-middle button {
+  margin: 20px auto;
+  width: 80px;
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  background-color: #a20131;
+  color: white;
+}
+
+.signup-register {
+  text-align: center;
+}
