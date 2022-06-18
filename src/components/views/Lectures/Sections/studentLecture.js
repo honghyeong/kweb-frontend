@@ -1,18 +1,22 @@
 import React from "react";
+import "./css/StudentLecture.css";
 
 function StudentLecture({ lecture, onClick }) {
   return (
     <>
-      <div className="student-lecture">
-        <div>{lecture.id}</div>
-        <div>
-          <p onClick={onClick} id={lecture.id}>
+      <style>
+        @import
+        url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap');
+      </style>
+      <div className="student-lecture-list">
+        <div className="student-lecture-id">{lecture.id}</div>
+        <div className="student-lecture-title">
+          <a onClick={onClick} id={lecture.id}>
             {lecture.title}
-          </p>
+          </a>
         </div>
-        <div>{lecture.description}</div>
-        <button value={lecture.id}>수강 취소</button>
-        <div>test</div>
+        <div className="student-lecture-description">{lecture.description}</div>
+        {/* <button value={lecture.id}>수강 취소</button> */}
       </div>
     </>
   );

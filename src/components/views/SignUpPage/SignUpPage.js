@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { signUpUser } from "../../../_actions/user_action";
+import "./SignUpPage.css";
 
 function SignUpPage(props) {
   const dispatch = useDispatch();
@@ -47,81 +48,81 @@ function SignUpPage(props) {
         alert("SignUp Failed");
       }
     });
-    // dispatch(signUpUser(body)).then((response) => {
-    //   if (response.payload.signUpSuccess) {
-    //     props.history.push("/");
-    //   } else {
-    //     alert("SignUp Failed");
-    //   }
-    // });
   };
 
   return (
     <>
-      <div>SignUpPage</div>
-      <div>Image</div>
-      <div>
-        <form onSubmit={onSubmitHandler}>
-          <div id="id">
-            <div>아이디</div>
-            <input
-              type="text"
-              value={id}
-              placeholder="id"
-              onChange={onIdHandler}
-            />
-          </div>
-          <div id="password">
-            <div>비밀번호</div>
-            <input
-              type="password"
-              value={password}
-              placeholder="password"
-              onChange={onPasswordHandler}
-            />
-          </div>
-          <div id="name">
-            <div>이름</div>
-            <input
-              type="text"
-              value={name}
-              placeholder="name"
-              onChange={onNameHandler}
-            />
-          </div>
-          <div id="ucode">
-            <div>학번</div>
-            <input
-              type="text"
-              value={ucode}
-              placeholder="ucode"
-              onChange={onUcodeHandler}
-            />
-          </div>
-          <div id="role">
-            <div>
-              <label>학생</label>
-              <input
-                type="radio"
-                id="student"
-                value="1"
-                checked={role == 1}
-                onClick={onRoleHandler}
-              />
+      <style>
+        @import
+        url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap');
+      </style>
+      <div className="signup-box">
+        <div className="signup-top">회원가입</div>
+        <div className="signup-middle">
+          <form onSubmit={onSubmitHandler}>
+            <div className="signup-inputs">
+              <div className="signup-input">
+                <div>아이디</div>
+                <input
+                  type="text"
+                  value={id}
+                  placeholder="아이디"
+                  onChange={onIdHandler}
+                />
+              </div>
+              <div className="signup-input">
+                <div>비밀번호</div>
+                <input
+                  type="password"
+                  value={password}
+                  placeholder="비밀번호"
+                  onChange={onPasswordHandler}
+                />
+              </div>
+              <div className="signup-input">
+                <div>이름</div>
+                <input
+                  type="text"
+                  value={name}
+                  placeholder="이름"
+                  onChange={onNameHandler}
+                />
+              </div>
+              <div className="signup-input">
+                <div>학번</div>
+                <input
+                  type="text"
+                  value={ucode}
+                  placeholder="학번"
+                  onChange={onUcodeHandler}
+                />
+              </div>
             </div>
-            <div>
-              <label>교수</label>
-              <input
-                type="radio"
-                id="instructor"
-                value="0"
-                checked={role == 0}
-                onClick={onRoleHandler}
-              />
+            <div className="signup-role">
+              <div>
+                <input
+                  type="radio"
+                  id="instructor"
+                  value="0"
+                  checked={role === 0}
+                  onClick={onRoleHandler}
+                />
+                <label>교수</label>
+                <input
+                  type="radio"
+                  id="student"
+                  value="1"
+                  checked={role === 1}
+                  onClick={onRoleHandler}
+                />
+                <label>학생</label>
+              </div>
             </div>
-          </div>
-          <button>Register</button>
-        </form>
+            <div className="signup-register">
+              <button>회원가입</button>
+            </div>
+          </form>
+        </div>
       </div>
     </>
   );

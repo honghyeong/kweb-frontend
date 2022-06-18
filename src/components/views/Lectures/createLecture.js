@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { getCookie } from "../../../utils/Cookie";
+import "./Sections/css/CreateLecture.css";
 
 function CreateLecture() {
   const [inputs, setInputs] = useState({
@@ -53,27 +54,29 @@ function CreateLecture() {
 
   return (
     <>
-      <div className="create-box">
-        <div>createLecture</div>
-        <div>title</div>
-        <input
-          type="text"
-          name="title"
-          value={title}
-          onChange={onChange}
-          placeholder="title"
-        />
-        <div>description</div>
-        <input
-          type="text"
-          name="description"
-          value={description}
-          onChange={onChange}
-          placeholder="description"
-        />
-        <div>
-          <button onClick={onCreate}>등록</button>
-          <button onClick={onReset}>취소</button>
+      <div className="create-background">
+        <div className="create-box">
+          <div className="create-title">강의 등록</div>
+          <div className="create-lecture-title">강의명</div>
+          <input
+            type="text"
+            name="title"
+            value={title}
+            onChange={onChange}
+            placeholder="title"
+          />
+          <div className="create-lecture-description">강의 설명</div>
+          <input
+            type="text"
+            name="description"
+            value={description}
+            onChange={onChange}
+            placeholder="description"
+          />
+          <div>
+            <button onClick={onCreate}>등록</button>
+            <button onClick={onReset}>취소</button>
+          </div>
         </div>
       </div>
     </>

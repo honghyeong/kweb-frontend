@@ -1,0 +1,61 @@
+.instructor-lecture-list-box {
+  width: 540px;
+  background-color: white;
+  padding: 10px auto 30px auto;
+  padding-top: 10px;
+  margin: 20px auto;
+  height: 700px;
+  border-radius: 20px;
+  font-size: 14px;
+  padding-left: 10px;
+}
+
+.instructor-lecture-name {
+  width: 200px;
+  height: 30px;
+  background-color: rgb(208, 209, 210);
+  margin: 20px auto 10px auto;
+  text-align: center;
+  border-radius: 30px;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.instructor-lecture-category {
+  display: flex;
+  margin-left: 5px;
+  width: 500px;
+  background-color: rgb(210, 205, 205);
+  font-weight: bold;
+  border-radius: 5px;
+  padding-top: 5px;
+}
+
+.instructor-lecture-category-id {
+  width: 20px;
+  height: 30px;
+  text-align: center;
+  margin-left: 8px;
+
+  font-size: 15px;
+}
+
+.instructor-lecture-category-title {
+  width: 80px;
+  height: 30px;
+  padding-left: 5px;
+}
+
+.instructor-lecture-category-description {
+  width: 160px;
+  height: 30px;
+  padding-left: 5px;
+}
+
+.instructor-lecture-list-box button {
+  width: 80px;
+  height: 30px;
+
+  margin-bottom: 20px;
+  margin-left: 10px;
+}
