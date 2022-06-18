@@ -74,20 +74,24 @@ function SignInPage(props) {
               <label>학생</label>
             </div>
             <div className="login-box-user">
-              <input
-                className="login-input"
-                type="text"
-                placeholder="ID"
-                value={id}
-                onChange={onIdHandler}
-              />
-              <input
-                className="login-input"
-                type="password"
-                placeholder="PASSWORD"
-                value={password}
-                onChange={onPasswordHandler}
-              />
+              <div>
+                <input
+                  className="login-input"
+                  type="text"
+                  placeholder="ID"
+                  value={id}
+                  onChange={onIdHandler}
+                />
+              </div>
+              <div>
+                <input
+                  className="login-input"
+                  type="password"
+                  placeholder="PASSWORD"
+                  value={password}
+                  onChange={onPasswordHandler}
+                />
+              </div>
             </div>
 
             <button>LOGIN</button>
