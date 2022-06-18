@@ -3,6 +3,7 @@ import { useCookies } from "react-cookie";
 import { useDispatch } from "react-redux";
 import { setCookie } from "../../../utils/Cookie";
 import { signInUser } from "../../../_actions/user_action";
+import "./SignInPage.css";
 
 function SignInPage(props) {
   const dispatch = useDispatch();
@@ -43,33 +44,18 @@ function SignInPage(props) {
 
   return (
     <>
-      <div className="up-box">
-        <div>창의적 미래 인재를 양성하고 어쩌고~</div>
+      <style>
+        @import
+        url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap');
+      </style>
+      <div className="up-box"></div>
+      <div className="middle-box">
         <div className="login-box">
-          <div>수강신청 시스템</div>
-          <div>COURSE REGISTRATION</div>
+          <div className="login-box-top">수강신청 시스템</div>
+          <div className="login-box-middle">COURSE REGISTRATION</div>
           <form onSubmit={onSubmitHandler}>
-            <input type="checkbox" value={1} onClick={onRoleHandler} />
-            <div>
-              <div>아이디</div>
-              <input
-                type="text"
-                placeholder="ID"
-                value={id}
-                onChange={onIdHandler}
-              />
-            </div>
-            <div>
-              <div>패스워드</div>
-              <input
-                type="password"
-                placeholder="PASSWORD"
-                value={password}
-                onChange={onPasswordHandler}
-              />
-            </div>
-            <div>
-              <label>교수</label>
+            <div className="login-role">
+              <div></div>
               <input
                 type="radio"
                 id="instructor"
@@ -77,13 +63,30 @@ function SignInPage(props) {
                 checked={role === 0}
                 onClick={onRoleHandler}
               />
-              <label>학생</label>
+              <label>교수</label>
               <input
                 type="radio"
                 id="student"
                 value="1"
                 checked={role === 1}
                 onClick={onRoleHandler}
+              />
+              <label>학생</label>
+            </div>
+            <div className="login-box-user">
+              <input
+                className="login-input"
+                type="text"
+                placeholder="ID"
+                value={id}
+                onChange={onIdHandler}
+              />
+              <input
+                className="login-input"
+                type="password"
+                placeholder="PASSWORD"
+                value={password}
+                onChange={onPasswordHandler}
               />
             </div>
 
@@ -92,6 +95,7 @@ function SignInPage(props) {
         </div>
         <div></div>
       </div>
+
       <div className="down-box"></div>
     </>
   );
