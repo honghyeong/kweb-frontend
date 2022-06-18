@@ -6,7 +6,7 @@ function InstructorLecture({ lecture, onClick }) {
       <div className="instructor-lecture">
         <div>{lecture.id}</div>
         <div>
-          <p onClick={onClick} id={lecture.id}>
+          <p onClick={onClick} value={lecture.id}>
             {lecture.title}
           </p>
         </div>

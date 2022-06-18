@@ -6,9 +6,11 @@ function InstructorBoard({ board, onClick }) {
       <div>InstructorBoard</div>
       <div className="board">
         <div>{board.id}</div>
-        <div>{board.title}</div>
-        <button onClick={onClick}>수정</button>
-        <button>삭제</button>
+        <div>
+          <p onClick={onClick} id={board.id}>
+            {board.title}
+          </p>
+        </div>
       </div>
     </>
   );

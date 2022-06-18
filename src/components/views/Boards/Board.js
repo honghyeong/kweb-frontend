@@ -9,6 +9,8 @@ function Board() {
   const result = location.match(paramRegex).index;
   const boardId = Number(location.substring(result + 5));
 
+  const s = data.content;
+
   useEffect(() => {
     axios
       .get("/api/board/view/" + boardId)
@@ -24,7 +26,7 @@ function Board() {
       <div>Board</div>
       <div>{data.id}</div>
       <div>{data.title}</div>
-      <div>{data.content}</div>
+      <div dangerouslySetInnerHTML={{ __html: s }}></div>
     </>
   );
 }

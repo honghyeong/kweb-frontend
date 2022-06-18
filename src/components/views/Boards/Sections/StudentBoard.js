@@ -1,12 +1,16 @@
 import React from "react";
 
-function StudentBoard({ board }) {
+function StudentBoard({ board, onClick }) {
   return (
     <>
       <div>StudentBoard</div>
       <div className="board">
         <div>{board.id}</div>
-        <div>{board.title}</div>
+        <div>
+          <p onClick={onClick} value={board.id}>
+            {board.title}
+          </p>
+        </div>
       </div>
     </>
   );

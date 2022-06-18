@@ -10,6 +10,11 @@ import StudentLecture from "./Sections/StudentLecture";
 function StudentLectures() {
   const [lectures, setLecture] = useState([]);
 
+  const onClick = (event) => {
+    const lectureId = event.target.id;
+    window.location.href = "/board/lists/" + lectureId;
+  };
+
   useEffect(() => {
     axios.get("/api/lecture/student").then((response) => {
       setLecture(response.data);
@@ -20,7 +25,13 @@ function StudentLectures() {
     <>
       <div>LectureList</div>
       {lectures.map((lecture) => {
-        return <StudentLecture lecture={lecture} key={lecture.id} />;
+        return (
+          <StudentLecture
+            lecture={lecture}
+            key={lecture.id}
+            onClick={onClick}
+          />
+        );
       })}
     </>
   );

@@ -12,10 +12,15 @@ function BoardLists() {
   const paramRegex = /lists/;
   const result = location.match(paramRegex).index;
   const lectureId = Number(location.substring(result + 6));
-  const params = { id: lectureId };
+  console.log(lectureId);
 
   const onRegister = (event) => {
     window.location.href = "/board/register/" + lectureId;
+  };
+
+  const onClick = (event) => {
+    const boardId = event.target.id;
+    window.location.href = "/board/view/" + boardId;
   };
 
   useEffect(() => {
@@ -39,9 +44,9 @@ function BoardLists() {
       ) : null}
       {boards.map((board) => {
         return role == 1 ? (
-          <StudentBoard board={board} key={board.id} />
+          <StudentBoard board={board} key={board.id} onClick={onClick} />
         ) : (
-          <InstructorBoard board={board} key={board.id} />
+          <InstructorBoard board={board} key={board.id} onClick={onClick} />
         );
       })}
     </>

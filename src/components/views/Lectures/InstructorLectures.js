@@ -21,8 +21,8 @@ function InstructorLectures() {
   };
 
   const onClick = (event) => {
-    console.log(event.target.id);
-    window.location.href = "/board/lists/" + event.target.id;
+    const lectureId = event.target.id;
+    window.location.href = "/board/lists/" + lectureId;
   };
 
   return (
