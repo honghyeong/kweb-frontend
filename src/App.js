@@ -10,11 +10,14 @@ import CreateLecture from "./components/views/Lectures/CreateLecture";
 import BoardLists from "./components/views/Boards/BoardLists";
 import CreateBoard from "./components/views/Boards/CreateBoard";
 import Board from "./components/views/Boards/Board";
+import { useEffect, useState } from "react";
+import { getCookie } from "./utils/Cookie";
 
 function App() {
   return (
     <Router>
       <div>
+        <NavigationBar />
         <Switch>
           <Route exact path="/" component={SignInPage} />
           <Route path="/signup" component={SignUpPage} />
@@ -36,7 +39,6 @@ function App() {
           <Route path="/board/lists" component={BoardLists} />
           <Route path="/board/view" component={Board} />
           <Route path="/board/register" component={CreateBoard} />
-          <Route path="/logout" component={NavigationBar} />
         </Switch>
       </div>
     </Router>
