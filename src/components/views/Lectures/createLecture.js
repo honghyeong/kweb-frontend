@@ -39,7 +39,7 @@ function CreateLecture() {
   };
 
   /**
-   * redirection testing
+   * TODO
    */
   useEffect(() => {
     const role = getCookie("role");
