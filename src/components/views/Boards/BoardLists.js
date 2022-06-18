@@ -14,7 +14,9 @@ function BoardLists() {
   const lectureId = Number(location.substring(result + 6));
   const params = { id: lectureId };
 
-  const onClick = () => {};
+  const onRegister = (event) => {
+    window.location.href = "/board/register/" + lectureId;
+  };
 
   useEffect(() => {
     axios
@@ -30,6 +32,11 @@ function BoardLists() {
   return (
     <>
       <div>Boards</div>
+      {role == 0 ? (
+        <div>
+          <button onClick={onRegister}>게시물 작성</button>
+        </div>
+      ) : null}
       {boards.map((board) => {
         return role == 1 ? (
           <StudentBoard board={board} key={board.id} />

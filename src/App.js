@@ -35,7 +35,7 @@ function App() {
           />
           <Route path="/board/lists" component={BoardLists} />
           <Route path="/board/view" component={Board} />
-          <Route path="/board/register" component={CreateBoard} exact={true} />
+          <Route path="/board/register" component={CreateBoard} />
           <Route path="/logout" component={NavigationBar} />
         </Switch>
       </div>
