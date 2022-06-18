@@ -32,6 +32,8 @@ function CreateLecture() {
           alert("교수가 아닙니다");
         }
       });
+
+    window.location.href = "/lecture/instructor";
   };
 
   const onReset = (event) => {

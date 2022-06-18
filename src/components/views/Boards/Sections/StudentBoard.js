@@ -7,7 +7,7 @@ function StudentBoard({ board, onClick }) {
       <div className="board">
         <div>{board.id}</div>
         <div>
-          <p onClick={onClick} value={board.id}>
+          <p onClick={onClick} id={board.id}>
             {board.title}
           </p>
         </div>

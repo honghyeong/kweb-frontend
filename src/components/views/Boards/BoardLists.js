@@ -12,7 +12,7 @@ function BoardLists() {
   const paramRegex = /lists/;
   const result = location.match(paramRegex).index;
   const lectureId = Number(location.substring(result + 6));
-  console.log(lectureId);
+  // console.log(lectureId);
 
   const onRegister = (event) => {
     window.location.href = "/board/register/" + lectureId;

@@ -22,6 +22,7 @@ function InstructorLectures() {
 
   const onClick = (event) => {
     const lectureId = event.target.id;
+    // console.log(lectureId);
     window.location.href = "/board/lists/" + lectureId;
   };
 

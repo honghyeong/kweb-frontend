@@ -35,7 +35,7 @@ function CreateBoard() {
         console.log(err);
       });
 
-    // window.location.href = "/board/lists/" + lectureId;
+    window.location.href = "/board/lists/" + lectureId;
   };
 
   return (
