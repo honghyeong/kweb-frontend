@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Lecture from "./Sections/Lecture";
+import "./Sections/css/Lectures.css";
 
 function Lectures() {
   const [lectures, setLecture] = useState([]);
@@ -26,12 +27,26 @@ function Lectures() {
 
   return (
     <>
-      <div>LectureList</div>
-      {lectures.map((lecture) => {
-        return (
-          <Lecture lecture={lecture} key={lecture.id} onRegister={onRegister} />
-        );
-      })}
+      <div className="lecture-box">
+        <div className="lecture-list-box">
+          <div className="lecture-list-name">전체 강의 목록</div>
+          <div className="lecture-category">
+            <div className="lecture-category-id">id</div>
+            <div className="lecture-category-title">title</div>
+            <div className="lecture-category-description">description</div>
+            <div className="lecture-category-instructor">instructor</div>
+          </div>
+          {lectures.map((lecture) => {
+            return (
+              <Lecture
+                lecture={lecture}
+                key={lecture.id}
+                onRegister={onRegister}
+              />
+            );
+          })}
+        </div>
+      </div>
     </>
   );
 }

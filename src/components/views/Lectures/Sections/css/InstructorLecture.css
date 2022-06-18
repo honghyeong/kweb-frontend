@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  font-size: 1rem;
+  font-family: "Roboto", "Noto Sans KR", sans-serif;
+  font-weight: 400;
+  color: #000000;
+}
+
+.instructor-lecture-list {
+  background-color: rgb(255, 252, 252);
+  display: flex;
+  justify-content: row;
+  width: 500px;
+  margin: 5px;
+  border: 1px solid;
+  height: 30px;
+}
+
+.instructor-lecture-list .instructor-lecture-id {
+  width: 20px;
+  height: 30px;
+  text-align: center;
+
+  border-right: 1px solid;
+  font-weight: bold;
+}
+
+.instructor-lecture-list .instructor-lecture-title {
+  width: 80px;
+  height: 30px;
+  padding-left: 5px;
+
+  border-right: 1px solid rgb(214, 214, 214);
+}
+.instructor-lecture-title a:hover {
+  text-decoration: underline;
+}
+
+.instructor-lecture-list .instructor-lecture-description {
+  width: 160px;
+  height: 30px;
+  padding-left: 5px;
+
+  border-right: 1px solid rgb(214, 214, 214);
+}
