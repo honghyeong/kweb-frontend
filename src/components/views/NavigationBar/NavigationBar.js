@@ -4,6 +4,7 @@ import { Cookies, useCookies } from "react-cookie";
 import { useDispatch, useSelector } from "react-redux";
 import { getCookie, removeCookie, setCookie } from "../../../utils/Cookie";
 import { logoutUser } from "../../../_actions/user_action";
+import "./NavigationBar.css";
 
 function NavigationBar(props) {
   const dispatch = useDispatch();
@@ -37,7 +38,7 @@ function NavigationBar(props) {
 
   return (
     <>
-      <div>
+      <div className="nav-bar">
         <button onClick={onClick} id="lecture-list">
           강의 목록
         </button>
