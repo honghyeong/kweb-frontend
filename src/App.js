@@ -32,10 +32,7 @@ function App() {
             component={StudentLectures}
             exact={true}
           />
-          <Route
-            path="/lecture/instructor/register"
-            component={CreateLecture}
-          />
+          <Route path="/lecture/register" component={CreateLecture} />
           <Route path="/board/lists" component={BoardLists} />
           <Route path="/board/view" component={Board} />
           <Route path="/board/register" component={CreateBoard} />
