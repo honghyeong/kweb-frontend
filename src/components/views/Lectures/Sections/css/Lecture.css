@@ -57,3 +57,12 @@ body {
   border: 1px solid transparent;
   height: 20px;
 }
+
+.lecture-list button:hover {
+  margin: auto 0px auto 70px;
+  margin-top: 1;
+  background-color: #e21a52;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  height: 20px;
+}
