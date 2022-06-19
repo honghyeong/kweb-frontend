@@ -45,7 +45,11 @@ function SignUpPage(props) {
       if (response.data.signUpSuccess) {
         props.history.push("/");
       } else {
-        alert("SignUp Failed");
+        alert("이미 존재하는 아이디입니다.");
+        setId("");
+        setPassword("");
+        setName("");
+        setUcode("");
       }
     });
   };
@@ -68,6 +72,7 @@ function SignUpPage(props) {
                   value={id}
                   placeholder="아이디"
                   onChange={onIdHandler}
+                  minLength="5"
                 />
               </div>
               <div className="signup-input">
@@ -76,6 +81,7 @@ function SignUpPage(props) {
                   type="password"
                   value={password}
                   placeholder="비밀번호"
+                  minLength="5"
                   onChange={onPasswordHandler}
                 />
               </div>
@@ -84,6 +90,7 @@ function SignUpPage(props) {
                 <input
                   type="text"
                   value={name}
+                  minLength="1"
                   placeholder="이름"
                   onChange={onNameHandler}
                 />
@@ -93,6 +100,7 @@ function SignUpPage(props) {
                 <input
                   type="text"
                   value={ucode}
+                  minLength="2"
                   placeholder="학번"
                   onChange={onUcodeHandler}
                 />
