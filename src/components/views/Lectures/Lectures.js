@@ -2,9 +2,14 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Lecture from "./Sections/Lecture";
 import "./Sections/css/Lectures.css";
+import { undefinedRedirecting } from "../../../utils/AuthRedirecting";
+import { getCookie } from "../../../utils/Cookie";
 
-function Lectures() {
+function Lectures(props) {
   const [lectures, setLecture] = useState([]);
+  const role = getCookie("role");
+
+  undefinedRedirecting();
 
   useEffect(() => {
     axios.get("/api/lecture").then((response) => {

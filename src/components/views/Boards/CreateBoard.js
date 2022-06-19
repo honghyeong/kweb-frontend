@@ -4,12 +4,14 @@ import { ImageUpload } from "quill-image-upload";
 import "react-quill/dist/quill.snow.css";
 import "./Sections/css/CreateBoard.css";
 import axios from "axios";
+import { instructorRedirecting } from "../../../utils/AuthRedirecting";
 Quill.register("modules/imageUpload", ImageUpload); // 커스텀 라이브러리를 등록해 준다.
 
 function CreateBoard() {
   const [value, setValue] = useState("");
   const [title, setTitle] = useState("");
 
+  instructorRedirecting();
   // extract lectureId from ul
   const location = window.location.pathname;
   const paramRegex = /register/;

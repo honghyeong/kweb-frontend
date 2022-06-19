@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { instructorRedirecting } from "../../../utils/AuthRedirecting";
 import { getCookie } from "../../../utils/Cookie";
 import "./Sections/css/CreateLecture.css";
 
@@ -10,6 +11,8 @@ function CreateLecture() {
   });
 
   const { title, description } = inputs;
+
+  instructorRedirecting();
 
   const onChange = (event) => {
     const { name, value } = event.target;

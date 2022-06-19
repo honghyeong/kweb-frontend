@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { useCookies } from "react-cookie";
 import { useDispatch } from "react-redux";
-import { setCookie } from "../../../utils/Cookie";
+import { useHistory } from "react-router-dom";
+import { authRedirecting } from "../../../utils/AuthRedirecting";
+import { getCookie, setCookie } from "../../../utils/Cookie";
 import { signInUser } from "../../../_actions/user_action";
 import "./SignInPage.css";
 
@@ -10,6 +12,11 @@ function SignInPage(props) {
   const [id, setId] = useState("");
   const [password, setPassword] = useState("");
   const [role, setRole] = useState(0);
+
+  if (getCookie("role") !== undefined) {
+    alert("이미 로그인에 성공하였습니다");
+    props.history.push("/lecture");
+  }
 
   const onIdHandler = (event) => {
     setId(event.currentTarget.value);
