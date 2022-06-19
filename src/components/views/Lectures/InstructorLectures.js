@@ -3,8 +3,7 @@ import React, { useEffect, useState } from "react";
 import InstructorLecture from "./Sections/InstructorLecture";
 import "./Sections/css/InstructorLectures.css";
 import {
-  authRedirecting,
-  instructorRedirecting,
+  studentRedirecting,
   undefinedRedirecting,
 } from "../../../utils/AuthRedirecting";
 /**
@@ -16,7 +15,7 @@ function InstructorLectures() {
   const [lectures, setLecture] = useState([]);
 
   undefinedRedirecting();
-  instructorRedirecting();
+  studentRedirecting();
 
   useEffect(() => {
     axios.get("/api/lecture/instructor").then((response) => {
