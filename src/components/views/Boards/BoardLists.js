@@ -4,10 +4,13 @@ import { getCookie, setCookie } from "../../../utils/Cookie";
 import InstructorBoard from "./Sections/InstructorBoard";
 import StudentBoard from "./Sections/StudentBoard";
 import "./Sections/css/BoardLists.css";
+import { undefinedRedirecting } from "../../../utils/AuthRedirecting";
 
 function BoardLists() {
   const [boards, setBoards] = useState([]);
   const [role, setRole] = useState(0);
+
+  undefinedRedirecting();
 
   const location = window.location.pathname;
   const paramRegex = /lists/;

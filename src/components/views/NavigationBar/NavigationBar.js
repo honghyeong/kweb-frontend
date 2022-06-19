@@ -8,8 +8,6 @@ import "./NavigationBar.css";
 
 function NavigationBar(props) {
   const dispatch = useDispatch();
-  const [role, setRole] = useState();
-  console.log(role);
   const logOutHandler = (event) => {
     dispatch(logoutUser()).then((response) => {
       if (response.payload.logoutSuccess) {
@@ -32,9 +30,8 @@ function NavigationBar(props) {
     }
   };
 
-  useEffect(() => {
-    setRole(getCookie("role"));
-  }, [role]);
+  const role = getCookie("role");
+  console.log(role);
 
   return (
     <>
@@ -45,6 +42,7 @@ function NavigationBar(props) {
         <button onClick={onClick} id="my-lecture">
           나의 강의
         </button>
+
         <button onClick={logOutHandler} id="logout">
           로그아웃
         </button>

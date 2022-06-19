@@ -2,6 +2,11 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import StudentLecture from "./Sections/StudentLecture";
 import "./Sections/css/StudentLectures.css";
+import {
+  instructorRedirecting,
+  studentRedirecting,
+  undefinedRedirecting,
+} from "../../../utils/AuthRedirecting";
 /**
  * 학생이 신청한 강의 목록을 볼 수 있다.
  * 해당 강의를 누르면 강의에 등록된 게시물 목록을 보여준다.
@@ -9,6 +14,9 @@ import "./Sections/css/StudentLectures.css";
 
 function StudentLectures() {
   const [lectures, setLecture] = useState([]);
+
+  undefinedRedirecting();
+  studentRedirecting();
 
   const onClick = (event) => {
     const lectureId = event.target.id;

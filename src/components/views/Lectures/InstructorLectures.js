@@ -2,6 +2,11 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import InstructorLecture from "./Sections/InstructorLecture";
 import "./Sections/css/InstructorLectures.css";
+import {
+  authRedirecting,
+  instructorRedirecting,
+  undefinedRedirecting,
+} from "../../../utils/AuthRedirecting";
 /**
  * 교수자가 개설한 강의 목록을 볼 수 있다.
  * 해당 강의를 누르면 강의에 등록된 게시물 목록을 보여준다.
@@ -9,6 +14,9 @@ import "./Sections/css/InstructorLectures.css";
 
 function InstructorLectures() {
   const [lectures, setLecture] = useState([]);
+
+  undefinedRedirecting();
+  instructorRedirecting();
 
   useEffect(() => {
     axios.get("/api/lecture/instructor").then((response) => {
