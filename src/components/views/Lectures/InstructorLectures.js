@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import InstructorLecture from "./Sections/InstructorLecture";
 import "./Sections/css/InstructorLectures.css";
 import {
-  studentRedirecting,
+  instructorRedirecting,
   undefinedRedirecting,
 } from "../../../utils/AuthRedirecting";
 /**
@@ -15,7 +15,7 @@ function InstructorLectures() {
   const [lectures, setLecture] = useState([]);
 
   undefinedRedirecting();
-  studentRedirecting();
+  instructorRedirecting();
 
   useEffect(() => {
     axios.get("/api/lecture/instructor").then((response) => {
@@ -24,7 +24,7 @@ function InstructorLectures() {
   }, [lectures]);
 
   const onCreate = () => {
-    window.location.href = "instructor/register";
+    window.location.href = "/lecture/register";
   };
 
   const onClick = (event) => {

@@ -24,6 +24,7 @@ function Lectures(props) {
       .post("/api/lecture/register", { lectureId })
       .then((response) => {
         console.log("Registered Lecture :", response.data);
+        alert("강의가 등록되었습니다");
       })
       .catch((err) => {
         if (err & err.response.status) alert("학생이 아닙니다");
